@@ -8,7 +8,7 @@ from models.agencyReview_model import AgencyReview_model
 agency_review = APIRouter()
 
 async def fetch_agency_data(agency_id: str):
-    express_url = f'https://agencymicro.azurewebsites.net/api/v1/agencies/{agency_id}'
+    express_url = f'https://agencymicro.azurewebsites.net/api/v1/agencies/id/{agency_id}'
     async with AsyncClient() as client:
         try:
             response = await client.get(express_url)
